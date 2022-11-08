@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <script src="main.css"></script>
     <script src="../js/sirial.js"></script>
-    <title>Document</title>
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="main.css"/>
+    <title>alert_smell</title>
 </head>
-<body>
+<body class="gradation">
     <header>
-        <nav>
-            <ul id="menu">                
-                <li><a href="">ver1</a></li>                
-                <li><a href="">ver2</a></li>
+        <nav id="nav">
+            <ul id="menu">
+                <li><a href="">Ver1</a></li>
+                <li><a href="">Ver2</a></li>
             </ul>
         </nav>
+        <div id="hamburger" onclick="hamburger()">
+          <span class="inner_line" id="line1"></span>
+          <span class="inner_line" id="line2"></span>
+          <span class="inner_line" id="line3"></span>
+        </div>
     </header>
-    <button onclick="sirial()">計測開始</button>
+
+    <main>
+        <div id="alert_text" class="alert_text">
+            <p>現在計測停止中です</p>
+        </div>
+        <div class="mainbutton">
+            <button onclick="alertTex()">test</button>
+            <button onclick="sirial()">計測開始</button>
+        </div>
+    </main>
     
 
 </body>
