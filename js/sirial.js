@@ -29,10 +29,6 @@ async function sirial(){
 function alertTex(){
   var max=0; 
 
-  var al=document.getElementById("alert_text");
-  if (max <=100){
-    al.textContent=String("安全です")
-  }
   setInterval(timefunc,1000);
   document.getElementById('target').classList.toggle('gradation');
   
@@ -41,9 +37,24 @@ function alertTex(){
 function timefunc(){
   time = time +1;
   console.log(time);
-    if (time == 5){
-    document.getElementById('btn_audio').currentTime = 0; //連続クリックに対応
-    document.getElementById('btn_audio').play(); //クリックしたら音を再生
+  if (time == 21){
+    document.getElementById('btn_audio1').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_audio1').play(); //クリックしたら音を再生
+  }
+  else if(time == 41){
+    document.getElementById('btn_audio2').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_audio2').play(); //クリックしたら音を再生
+  }
+
+  var al=document.getElementById("alert_text");
+  if (time <=10){
+    al.textContent=String("安全です")
+  }
+  else if(21 == time){
+    al.textContent=String("通知に気を付けて作業してください")
+  }
+  else if(41 == time){
+    al.textContent=String("今すぐ退避してください")
   }
 };
 
@@ -54,4 +65,5 @@ function stop(){
   }else{
      an.style.animationPlayState = "running";
   }
+  
 }
