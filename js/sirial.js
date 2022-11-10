@@ -1,4 +1,4 @@
-console.log("str");
+var time=0;
 async function sirial(){
   const filter = {
     usbVendorId: 0x2341 // Arduino SA
@@ -27,11 +27,31 @@ async function sirial(){
 };
 
 function alertTex(){
-  console.log("str");
-  var max=0;
+  var max=0; 
+
   var al=document.getElementById("alert_text");
   if (max <=100){
     al.textContent=String("安全です")
   }
-  console.log("fin");
+  setInterval(timefunc,1000);
+  document.getElementById('target').classList.toggle('gradation');
+  
 };
+
+function timefunc(){
+  time = time +1;
+  console.log(time);
+    if (time == 5){
+    document.getElementById('btn_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_audio').play(); //クリックしたら音を再生
+  }
+};
+
+function stop(){
+  var an = document.getElementById('target');
+  if(an.style.animationPlayState == "running"){
+     an.style.animationPlayState = "paused";
+  }else{
+     an.style.animationPlayState = "running";
+  }
+}
