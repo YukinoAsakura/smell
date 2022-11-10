@@ -11,25 +11,33 @@ html{
   font-family: "Yu Gothic","游ゴシック",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro W3","メイリオ",sans-serif;
 }
 
+body{
+  background: #5299bc;
+}
 /*背景のグラデーションアニメ*/
 .gradation {
   animation-name: gradationAnimation;
-  animation-duration: 20s;
+  animation-duration: 60s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
 
 @keyframes gradationAnimation {
   0% {
-      background-color: #ff4d33;
+      background-color: #5299bc;
   }
   50% {
       background-color: #e7b700;
   }
   100% {
-      background-color: #5299bc;
+      background-color: #ff4d33;
   }
+}
+
+.gradationst{
+  animation-play-state: paused;
 }
 /*ここまで*/
 
@@ -163,4 +171,8 @@ button{
 
 .numval{
   font-size: 12px;
+}
+
+.math{
+  margin-top: 100%;
 }
