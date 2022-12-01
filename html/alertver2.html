@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="../js/sirial.js"></script>
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="main.css"/>
+    <title>alert_smell</title>
+</head>
+<body id="target" style="animation-play-state:running">
+    <header>
+        <nav id="nav">
+            <ul id="menu">
+                <li><a href="alert.html">Ver1</a></li>
+                <li><a href="alertver2.html">Ver2</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger" onclick="hamburger()">
+          <span class="inner_line" id="line1"></span>
+          <span class="inner_line" id="line2"></span>
+          <span class="inner_line" id="line3"></span>
+        </div>
+    </header>
+
+    <main>
+        <div id="alert_text" class="alert_text">
+            <p>現在計測停止中です</p>
+        </div>
+        <div class="mainbutton">
+            <button onclick="alertTex()">計測開始</button>
+            <audio id="btn_audio2">
+                <source src="退避.mp3" type="audio/wav">
+            </audio>
+            <audio id="btn_audio1">
+                <source src="通知に.mp3" type="audio/mp3">
+            </audio>
+            <button onclick="stop()">停止</button>
+        </div>
+    </main>
+    <div class="math">
+        <p>finish!</p>
+    </div>
+    
+
+</body>
+</html>
